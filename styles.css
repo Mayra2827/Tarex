@@ -1,0 +1,200 @@
+/* ===== Colores (sácalos de tu menú; cámbialos aquí) ===== */
+:root {
+  --madera: #aa7f66;
+  --madera-oscura: #3b2418;
+  --rosa: #f4808b;
+  --rosa-claro: #ffd9dc;
+  --verde: #6cb33f;
+  --crema: #fff6ee;
+  --chocolate: #4a2a1a;
+
+  --titulos: "Lilita One", "Arial Black", sans-serif;
+  --texto: "Nunito", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--texto);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--crema);
+  background: var(--madera-oscura);
+}
+
+img { max-width: 100%; display: block; }
+
+a:focus-visible { outline: 3px solid var(--crema); outline-offset: 3px; }
+
+/* ===== Botones ===== */
+.boton {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: var(--rosa);
+  color: var(--chocolate);
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: transform 0.2s;
+}
+.boton:hover { transform: scale(1.05); }
+.boton--claro { background: var(--crema); }
+
+/* ===== Hero ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  min-height: 90vh;
+  padding: 3rem 1.5rem;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 70px, rgba(0,0,0,0.08) 70px 72px),
+    var(--madera);
+}
+
+.hero__texto { max-width: 30rem; }
+
+.logo {
+  font-family: var(--titulos);
+  font-weight: 400;
+  font-size: clamp(4rem, 14vw, 8rem);
+  line-height: 1;
+  color: var(--rosa);
+  -webkit-text-stroke: 3px var(--crema);
+  paint-order: stroke fill;
+}
+
+.slogan {
+  font-family: var(--titulos);
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  color: var(--crema);
+  margin: 0.3rem 0 1rem;
+}
+
+.intro { margin-bottom: 1.8rem; max-width: 26rem; }
+
+.hero__dino {
+  width: min(320px, 70%);
+  animation: entrada 0.9s ease-out both;
+}
+
+@keyframes entrada {
+  from { opacity: 0; transform: translateX(40px) rotate(6deg); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ===== Menú ===== */
+.menu {
+  padding: 4rem 1.5rem;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: var(--titulos);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 7vw, 3.6rem);
+  text-align: center;
+  color: var(--rosa);
+  margin-bottom: 2.5rem;
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.plato {
+  background: var(--rosa);
+  color: var(--chocolate);
+  border-radius: 1.5rem;
+  padding: 1.2rem 1.2rem 1.5rem;
+  text-align: center;
+}
+
+.plato img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1rem;
+  background: var(--rosa-claro);
+  margin-bottom: 1rem;
+}
+
+.plato h3 {
+  font-family: var(--titulos);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.plato h3 span {
+  display: block;
+  font-family: var(--texto);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.precio {
+  font-family: var(--titulos);
+  font-size: 1.8rem;
+}
+
+/* ===== Especialidad y agregados ===== */
+.menu__extra {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.menu__extra h3 {
+  font-family: var(--titulos);
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--rosa);
+  margin-bottom: 0.6rem;
+}
+
+.especialidad p { font-size: 1.3rem; font-weight: 800; }
+
+.agregados ul { list-style: none; max-width: 320px; }
+
+.agregados li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 2px dashed rgba(255, 246, 238, 0.35);
+  font-weight: 700;
+}
+
+/* ===== Contacto ===== */
+.contacto {
+  background: var(--rosa);
+  color: var(--chocolate);
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.contacto h2 { color: var(--chocolate); margin-bottom: 0.8rem; }
+.contacto .boton { margin-top: 1.5rem; background: var(--chocolate); color: var(--crema); }
+.datos { margin-top: 1.8rem; font-weight: 700; }
+
+/* ===== Pie ===== */
+.pie {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Accesibilidad ===== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero__dino { animation: none; }
+  .boton { transition: none; }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ta-Rex | Los Tacos de Rex</title>
+  <meta name="description" content="Tacos, tortas, burritos, nachos y sopa de tortilla. Elige res, pastor, pollo o mixta.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero__texto">
+      <h1 class="logo">Ta-Rex</h1>
+      <p class="slogan">Los tacos de Rex</p>
+      <p class="intro">Tacos, tortas, burritos y nachos. Tú eliges la especialidad: res, pastor, pollo o mixta.</p>
+      <a class="boton" href="#menu">Ver el menú</a>
+    </div>
+    <!-- Cambia dino.png por tu imagen del dinosaurio -->
+    <img class="hero__dino" src="images/dino.png" alt="Dinosaurio Rex comiendo un taco">
+  </header>
+
+  <main>
+    <section id="menu" class="menu">
+      <h2>Menú</h2>
+
+      <div class="menu__grid">
+        <article class="plato">
+          <img src="images/torta.jpg" alt="Torta">
+          <h3>Torta</h3>
+          <p class="precio">$4.00</p>
+        </article>
+
+        <article class="plato">
+          <img src="images/sopa.jpg" alt="Sopa de tortilla">
+          <h3>Sopa de tortilla</h3>
+          <p class="precio">$3.75</p>
+        </article>
+
+        <article class="plato">
+          <img src="images/nachos.jpg" alt="Nachos">
+          <h3>Nachos</h3>
+          <p class="precio">$4.50</p>
+        </article>
+
+        <article class="plato">
+          <img src="images/burrito.jpg" alt="Burrito">
+          <h3>Burrito</h3>
+          <p class="precio">$4.00</p>
+        </article>
+
+        <article class="plato">
+          <img src="images/tacos.jpg" alt="4 tacos con doble tortilla">
+          <h3>4 Tacos <span>doble tortilla</span></h3>
+          <p class="precio">$4.25</p>
+        </article>
+      </div>
+
+      <div class="menu__extra">
+        <div class="especialidad">
+          <h3>Especialidad a elegir</h3>
+          <p>Res, pastor, pollo o mixta.</p>
+        </div>
+
+        <div class="agregados">
+          <h3>Puede agregar</h3>
+          <ul>
+            <li><span>Queso</span><span>$0.75</span></li>
+            <li><span>Aguacate</span><span>$0.75</span></li>
+            <li><span>Piña</span><span>$0.75</span></li>
+            <li><span>Salsa</span><span>$0.35</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Haz tu pedido</h2>
+      <p>Escríbenos por WhatsApp o visítanos.</p>
+      <!-- Cambia el número (código de país + número, sin signos) -->
+      <a class="boton boton--claro" href="https://wa.me/50300000000" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      <p class="datos">
+        Dirección: Zaragoza, La libertad, El Salvador<br>
+        Horario: Sabado y Domingo 12:00 PM a 7:00 PM
+      </p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>&copy; 2026 Ta-Rex, Los tacos de Rex</p>
+  </footer>
+
+</body>
+</html>
